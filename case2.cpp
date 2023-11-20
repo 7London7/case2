@@ -1,31 +1,36 @@
 #include <iostream>
 #include <string>
-#include "case2.h"
+#include "case.h"
 using namespace std;
-/* long long itc_math1(string str){
-    int a = 0, st = 1; int i = str.size()-1;
-while(i >= 0){
-    a = a +  (str[i] - '0') * st; //1 2 4 8
-    st = st * 2;
-    i--;
+
+long long itc_len(string str){
+    int i = 0;
+    int k = 0;
+    while(str[i] != '\0'){
+        k = k + 1;
+    i++;
+    }
+    return k;
 }
-return a;
+
+string itc_reverse_str(string str){
+ string reverse = "";
+for(long long i = itc_len(str) - 1; i >= 0;i--){
+        reverse = reverse + str[i];
 }
-*/
-long long itc_math(string str1, string str2, char oper){
+ return reverse;
+}
+
+string itc_plus(string str1, string str2, char oper){
  int i = 0;
- int sum;
+ string sum = "";
  if(oper == '+'){
-     for(int i = 0; i < str.size(); i++){
-    sum =  (str1[i] - '0') + (str2[i] - '0');
+     itc_reverse_str(str1);
+    itc_reverse_str(str2);
+    if(itc_len(str1) > itc_len(str2))
+        
+     for(int i = 0; i < str1.size(); i++){
          sum = sum + '0';
  }
 }
-if(oper == '+'){
-     for(int i = 0; i < str.size(); i++){
-    sum =  (str1[i] - '0') + (str2[i] - '0');
-         sum = sum + '0';
-       }
-    }
-    return sum;
 }
