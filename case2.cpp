@@ -21,10 +21,9 @@ for(long long i = itc_len(str) - 1; i >= 0;i--){
  return reverse;
 }
 
-string itc_plus(string str1, string str2, char oper){
- int i = 0;
+string itc_plus(string str1, string str2){
  long long sum;
- if(oper == '+'){
+string summa;
      itc_reverse_str(str1);
     itc_reverse_str(str2);
     if(itc_len(str1) > itc_len(str2)){
@@ -32,12 +31,15 @@ string itc_plus(string str1, string str2, char oper){
 while(sum != 0){
 str2 = str2 + '0';
 }
+while(str1[i] != '\0' && str2[i] != '\0'){
+    summa = str1[i] + str2[i];
+i++;
+}
     }else{
 sum = itc_len(str2) - itc_len(str1);
 while(sum != 0){
 str1 = str1 + '0';
 }
        }
-
-}
+
 }
