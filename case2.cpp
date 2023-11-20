@@ -18,11 +18,14 @@ long long itc_math(string str1, string str2, char oper){
  if(oper == '+'){
      for(int i = 0; i < str.size(); i++){
     sum =  (str1[i] - '0') + (str2[i] - '0');
+         sum = sum + '0';
  }
 }
 if(oper == '+'){
      for(int i = 0; i < str.size(); i++){
     sum =  (str1[i] - '0') + (str2[i] - '0');
+         sum = sum + '0';
        }
     }
+    return sum;
 }
